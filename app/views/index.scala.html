@@ -1,0 +1,345 @@
+@(signupForm: Form[Application.Register], loginForm: Form[Application.Login])
+
+@scripts = {
+    <script src="@routes.Assets.at("javascripts/password.js")" type="text/javascript"></script>
+}
+
+@main(null, scripts) {
+
+    <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">Share and rent a Bikee with someone you like!</div>
+        <div class="intro-heading">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <div id="imaginary_container">
+                  <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Search</span>
+                    <input type="text" class="form-control" aria-describedby="basic-addon1">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#services" class="page-scroll btn btn-xl">Search</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <section id="login">
+    <div class="container text-center">
+      <h2 class="section-heading2">Log In</h2>
+      <h3 class="section-subheading text-muted">Welcome to Bikee!</h3>
+      <div class="col-md-6 col-sm-offset-3">
+
+        @login(loginForm)
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Register -->
+  <section id="register">
+    <div class="container text-center">
+      <h2 class="section-heading2">Register</h2>
+      <h3 class="section-subheading text-muted"> Still don't have account? Register today for free!</h3>
+
+      <div class="col-md-6 col-sm-offset-3">
+        @views.html.account.signup.createFormOnly(signupForm)
+      </div>
+    </div>
+  </section>
+
+
+
+
+      <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Where you can find us?</h2>
+            <h3 class="section-subheading text-muted">We operate in next cities.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img src="@routes.Assets.at("images/wroclaw.jpg")" class="img-responsive" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Wroclaw</h4>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img src="@routes.Assets.at("images/moscow.jpg")" class="img-responsive" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Moscow</h4>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img src="@routes.Assets.at("images/NS.jpg")" class="img-responsive" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Novi Sad</h4>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img src="@routes.Assets.at("images/amsterdam.jpg")" class="img-responsive" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Amsterdam</h4>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img src="@routes.Assets.at("images/berlin.jpg")" class="img-responsive" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Berlin</h4>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img src="@routes.Assets.at("images/NY2.jpg")" class="img-responsive" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>New Yourk</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+  <section id="about" class="bg-warning">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">About Bikee</h2>
+          <h3 class="section-subheading text-muted">Wonder how to use application?</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="timeline">
+            <li>
+              <div class="timeline-image">
+                <img class="img-circle img-responsive" src="@routes.Assets.at("images/search1.jpg")" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="subheading">Find a ride</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">All you need to do to find a Bikee you like is to use our Search! Easy and fast! You can search by entering the name of appropriate city or state.
+                    If you already know and like somebody from this place, you can also find him/her by entering his username. </p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img class="img-circle img-responsive" src="@routes.Assets.at("images/message1.png")" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="subheading">Contact Renter</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">Get your Bikee on time! After you have choosen a Bikee you would like to rent and date&time send request to Renter. Soon after sending the request you will be notified about your approval of renting. </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-image">
+                <img class="img-circle img-responsive" src="@routes.Assets.at("images/card.jpg")" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="subheading">Book a Bikee</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">Bikee is ready for you! Last step before getting your Bikee is paying for your booking by credit card or Pay Pall. After that
+                    you can pick it up or ask Renter if he can deliver it to you. </p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img class="img-circle img-responsive" src="@routes.Assets.at("images/upgrade.jpg")" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="subheading">Become Renter
+
+                  </h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">Like to share? Become a Renter and share with people who are sharing with you. Earn money easy met new people. Sharing is future! </p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <h4>Be Part
+                  <br>Of Our
+                  <br>Story!</h4>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Team Section -->
+  <section id="team" class="bg-light-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Our Amazing Team</h2>
+          <h3 class="section-subheading text-muted">Have a question or suggestion? Contact us and we will be more than happy to answer you.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="team-member">
+            <img src="@routes.Assets.at("images/nina.jpg")" class="img-responsive img-circle" alt="">
+            <h4>Nina Simic</h4>
+            <p class="text-muted">Lead Designer</p>
+            <ul class="list-inline social-buttons">
+              <li><a href="#"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li><a href="#"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a>
+              </li>
+              <p class="text-muted">ninasimicns@@gmail.com</p>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="team-member">
+            <img src="@routes.Assets.at("images/sandra.jpg")" class="img-responsive img-circle" alt="">
+            <h4>Aleksandra Milivojevic</h4>
+            <p class="text-muted">Lead Developer</p>
+            <ul class="list-inline social-buttons">
+              <li><a href="#"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li><a href="#"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a>
+              </li>
+              <p class="text-muted">aleksandramilivojevic94@@gmail.com</p>
+            </ul>
+          </div>
+        </div>
+
+        </div>
+
+    </div>
+  </section>
+
+    <!-- Sponsors -->
+  <section id="sponsors" class="bg-warning">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Like our application?</h2>
+          <h3 class="section-subheading text-muted">Support us, help us in future development and share success with us.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+            <div class="portfolio-hover-content">
+              <br>
+            </div>
+            <img src="@routes.Assets.at("images/planet.png")" class="img-responsive" alt="">
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+            <div class="portfolio-hover-content">
+              <br>
+            </div>
+            <img src="@routes.Assets.at("images/capriolo.jpg")" class="img-responsive" alt="">
+          </a>
+
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+            <div class="portfolio-hover-content">
+              <br>
+            </div>
+            <img src="@routes.Assets.at("images/inter.jpg")" class="img-responsive" alt="">
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+            <div class="portfolio-hover-content">
+              <br>
+            </div>
+            <img src="@routes.Assets.at("images/ideal.jpg")" class="img-responsive" alt="">
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+            <div class="portfolio-hover-content">
+              <br>
+            </div>
+            <img src="@routes.Assets.at("images/gt.jpg")" class="img-responsive" alt="">
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+            <div class="portfolio-hover-content">
+              <br>
+            </div>
+            <img src="@routes.Assets.at("images/air.png")" class="img-responsive" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    </section>
+}

@@ -1,0 +1,60 @@
+New log file opened at Tue Dec 13 23:14:07 CET 2016 by 30460@HP
+Taking next connection to: 53199
+New client attempting to connect on port: 53200-53199
+  Address = /156.17.227.28:53199
+This client on port 53200 has uuid 7b8236f0-9ff6-4cb2-b55f-7b10b0bdb3f1 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-7b8236f0-9ff6-4cb2-b55f-7b10b0bdb3f1
+Taking next connection to: 53199
+New client attempting to connect on port: 53219-53199
+  Address = /156.17.227.28:53199
+Handshake exception on socket: 53219
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 53199
+New client attempting to connect on port: 53220-53199
+  Address = /156.17.227.28:53199
+This client on port 53220 has uuid 39e608af-4b94-496e-befb-bf198e02d425 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-39e608af-4b94-496e-befb-bf198e02d425
+Taking next connection to: 53199
+New client attempting to connect on port: 53222-53199
+  Address = /156.17.227.28:53199
+Handshake exception on socket: 53222
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 53199
+New client attempting to connect on port: 53223-53199
+  Address = /156.17.227.28:53199
+This client on port 53223 has uuid dea313bb-f111-4d3e-9f89-2c0c723b2117 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-39e608af-4b94-496e-befb-bf198e02d425, activator-dea313bb-f111-4d3e-9f89-2c0c723b2117
+Taking next connection to: 53199
+Server socket closed java.net.SocketException: Socket operation on nonsocket: configureBlocking
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 30460@HP logs at Tue Dec 13 23:16:46 CET 2016, goodbye.
